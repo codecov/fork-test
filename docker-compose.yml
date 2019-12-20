@@ -1,0 +1,12 @@
+version: "3"
+services:
+  python:
+    image: codecov/standards-python:latest
+    build: ./
+    volumes: 
+      - ./src/index.py:/app/index.py
+      - ./src/test_index.py:/app/text_index.py
+    command: ./entrypoint.sh
+volumes: 
+  index.py:
+  test_index.py:
